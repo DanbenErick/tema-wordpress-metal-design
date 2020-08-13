@@ -1,0 +1,106 @@
+.icon-phone, .icon-whatsapp {
+    font-size: 20px;
+    display: inline-block;
+    padding: 1px 4px;
+}
+.abrirModal:hover {
+    cursor: pointer;
+}
+.bar__informacion li, nav li, .bar__categorias li {
+    margin: 0;
+}
+.bar__informacion ul, nav ul, .bar__categorias ul {
+    margin: 0;
+    display: flex;
+    list-style: none;
+}
+.bar__informacion {
+    background: $color_1;
+    color: white;
+    ul {
+        justify-content: space-between;
+    }
+    .telefono__categoria {
+        display: inline-blocK;
+        padding: 5px 10px;
+    }    
+    a {
+        display: block;
+        color: white;
+        padding: 5px 10px;
+        &:hover {
+            // font-weight: bold;
+            transform: scale(1.05);
+        } 
+    }
+}
+.bar__categorias::-webkit-scrollbar {
+    display: none;
+}
+.bar__categorias {
+    max-width: 100%;
+    overflow-x: scroll;
+    
+}
+
+@media screen and(max-width: 480px) {
+    .bar__informacion, nav, .bar__categorias {
+        padding: 5px 0;
+    }
+    .telefono__informacion {
+        background: black;
+        display: none;
+    }
+}
+
+nav {
+    background: white;
+    padding: 0 20px;
+    
+    a {
+        color: $color_text;
+        display: inline-block;
+        // padding: 10px 20px;
+    }
+    ul {
+        list-style: none;
+        justify-content: space-between;
+    }
+    li {
+        display: flex;
+        align-items: center;
+    }
+    img {
+        width: 100px;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+// Barra de Categorias
+
+.bar__categorias {
+    background: $color_1;
+    ul {
+        justify-content: center;
+    }
+    a {
+        color: white;
+        display: block;
+        padding: 10px 20px;
+        &:hover {
+            font-weight: bold;
+        }
+    }
+    @media screen and(max-width: 480px) {
+        // padding: 10px 20px;
+        ul{
+            justify-content: flex-start;
+            // background: #000;
+        }
+    }
+}

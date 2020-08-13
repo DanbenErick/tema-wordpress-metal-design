@@ -1,0 +1,101 @@
+@import "components/basic";
+@import "components/var";
+@import "components/header";
+.swiper-container {
+    width: 100%;
+    height: 300px;
+}
+
+
+section {
+    width: 90%;
+    margin: auto;
+    h1 {
+        font-family: Poppins;
+        font-weight: bold;
+        font-size: 22px;
+        padding: 60px 0;
+    }
+    .productos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+        @media screen and(max-width: 768px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @media screen and(max-width: 425px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media screen and(max-width: 375px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .producto {
+            background: white;
+            width: 100%;
+            height: 300px;
+            position: relative;
+            .producto-imagen {
+                background: white;
+            }
+            .producto-informacion {
+                background: white;
+                padding: 10px 20px;
+                .nombre-producto {
+                    color: black;
+                    font-weight: bold;
+                    font-size: 16px;
+                }
+                .acabado-producto {
+                    color: #131313;
+                    font-size: 14px;
+                }
+                .precio-producto {
+                    text-align: right;
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: $color_2;
+                }
+            }
+            .producto-hover {
+                display: none;
+            }
+            &:hover .producto-hover {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 300px;
+                background: rgba(white,.5);
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                a {
+                    display: block;
+                }
+                .agregar-carrito {
+                    display: inline;
+                    background: $color_2;
+                    color: white;
+                    font-size: 14px;
+                    padding: 5px 20px;
+                    &:hover {
+                        background:darken($color_2,10);
+                    }
+                }
+                .producto-informacion {
+                    text-align: center;
+                    margin-top: 10px;
+                    background: none;
+                }
+            }
+        }
+    }
+}
+
+body {
+    background: $color_5;
+}
+
+
+@import "components/footer";
+@import "components/modal";

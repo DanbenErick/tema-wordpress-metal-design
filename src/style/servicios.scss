@@ -1,0 +1,85 @@
+@import "components/basic";
+@import "components/var";
+@import "components/icons";
+@import "components/header";
+main {
+    background: $color_5;
+    max-width: 100%;
+    padding: 40px;
+    h1 {
+        font-size: 2em;
+        padding: 40px 0;
+    }
+    @media screen and(max-width: 480px) {
+        padding: 0;
+        h1 {
+            display: block;
+            padding: 20px;
+            font-size: 1.5em;
+        }
+    }
+    .contenedor__servicios {
+        h2 {
+            padding: 40px 0;
+            font-family: Poppins;
+        }
+        p {
+            font-family: Roboto;
+            padding-bottom: 40px;
+        }
+        .contactar__correo, .contactar__whatsapp {
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+        }
+        .contactar__whatsapp {
+            background: $color_whatsapp;
+        }
+        .contactar__correo {
+            background: $color_email;
+        }
+        @media screen and(max-width:480px) {
+            h2 {
+                padding: 10px 0;
+                font-size: 1.3em;
+            }
+            .contactar__whatsapp,.contactar__correo {
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+    }
+    .servicio {
+        display: inline-grid;
+        background: white;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 40px;
+        box-shadow: 0px 0px 10px rgba(#ececec,.6);
+        .servicio__imagen {
+            display: flex;
+            align-items: center;
+        }
+        @media screen and(max-width: 768px){ 
+            grid-template-columns: 1fr;
+            .servicio__imagen {
+                padding: 20px;
+            }
+        }
+
+        @media screen and(min-width: 768px) {
+            &:nth-child(even) {
+                direction: rtl;
+            }
+        }
+        @media screen and(max-width: 480px) {
+            .servicio__imagen {
+                padding: 0;
+            }
+        }
+        .servicio__informacion {
+            padding: 20px;
+        }
+    }
+
+}
+@import "components/footer";
